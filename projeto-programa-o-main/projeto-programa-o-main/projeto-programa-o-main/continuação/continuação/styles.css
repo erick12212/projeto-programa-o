@@ -1,7 +1,7 @@
 :root {
     --texto-principal: gold;
     --texto-pergunta: goldenrod;
-    --texto-resposta: rgba(255, 217, 0, 0.5);
+    --texto-resposta: yellow;
 }
 
 body {
@@ -26,6 +26,8 @@ body {
     text-align: center;
     border: 1px solid var(--texto-principal);
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 }
 
 .cartao__conteudo h3 {
@@ -37,6 +39,18 @@ body {
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+}
+
+.cartao__conteudo__pergunta {
+    color: var(--texto-pergunta);
+    font-size: 25px;
+    font-weight: 600;
+}
+.cartao__conteudo__resposta {
+    color: var(--texto-resposta);
+    font-size: 20px;
+    font-weight: 500;
+
 }
 footer {
     background-color: black;
@@ -51,4 +65,8 @@ footer p {
     text-align: center;
     font-size: 0.6rem;
     margin-top: 0.5rem;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
 }
